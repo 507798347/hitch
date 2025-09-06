@@ -18,6 +18,18 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+/*
+*判断类型是否是基本类型（isBasicTypes）。
+*根据字符串转换默认值（getDefValue）。
+*获取类信息（classForName）。
+*获取类的属性列表（getWrapPropertyList）。
+*比较两个对象是否相等（isEquals）。
+*创建对象实例（newInstance）。
+*获取类的字段列表（getFieldList）。
+*获取字段的注解（getAnnotations）。
+*复制对象属性（copyProperties）将一个对象的属性值复制到另一个对象
+* */
+
 public class ReflectUtils {
     private static final List<String> BASIC_TYPES = new ArrayList();
 

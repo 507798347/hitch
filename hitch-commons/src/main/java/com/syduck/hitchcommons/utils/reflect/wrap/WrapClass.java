@@ -8,7 +8,11 @@ import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+/*
+*保存类的类型（classType）、字段（fieldMap）和属性（propertyMap）。
+*通过 ReflectUtils 获取类的字段和属性信息，并存储起来。
+*提供 getProperty 方法，根据属性名获取 WrapProperty
+* */
 @Getter
 public class WrapClass {
     private final Class classType;
