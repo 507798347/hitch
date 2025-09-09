@@ -7,13 +7,6 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/**
- *存储属性的名字（propName）、数据类型（dataType）、读取方法（readMethod）、
- * 写入方法（writeMethod）和注解（annotations）。
-
- * 提供 getValue 方法，用于通过 getter 方法获取属性的值。
- * 提供 setValue 方法，用于通过 setter 方法设置属性的值。
- */
 @Getter
 public class WrapProperty {
 

@@ -2,9 +2,9 @@ package com.syduck.hitchcommons.entity;
 
 import com.alibaba.fastjson.JSON;
 import com.syduck.hitchcommons.constant.HitchConstants;
+import com.syduck.hitchcommons.utils.reflect.ReflectUtils;
 import com.syduck.hitchcommons.utils.CommonsUtils;
 import com.syduck.hitchcommons.utils.SnowflakeIdWorker;
-import com.syduck.hitchcommons.utils.reflect.ReflectUtils;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 

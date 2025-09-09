@@ -1,0 +1,97 @@
+package com.syduck.hitchmodules.vo;
+
+
+import com.syduck.hitchcommons.domain.vo.VO;
+import com.syduck.hitchcommons.enums.InitialResolverType;
+import com.syduck.hitchcommons.groups.Group;
+import com.syduck.hitchcommons.initial.annotation.InitialResolver;
+import com.syduck.hitchmodules.po.NoticePO;
+
+public class NoticeVO implements VO {
+
+    /**
+     * 发送人ID
+     */
+    /**
+     * 当前登陆人ID
+     */
+    @InitialResolver(resolver = InitialResolverType.CURRENTA_ACCOUNT, groups = {Group.Select.class})
+    private String senderId;
+
+    /**
+     * 发送人姓名
+     */
+    private String senderUseralias;
+
+    /**
+     * 接收人ID
+     */
+    private String receiverId;
+
+    /**
+     * 接收人人姓名
+     */
+    private String receiverUseralias;
+
+    /**
+     *
+     * 乘客行程ID
+     */
+    private String tripId;
+
+
+    private String message;
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
+    public String getSenderUseralias() {
+        return senderUseralias;
+    }
+
+    public void setSenderUseralias(String senderUseralias) {
+        this.senderUseralias = senderUseralias;
+    }
+
+    public String getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public String getReceiverUseralias() {
+        return receiverUseralias;
+    }
+
+    public void setReceiverUseralias(String receiverUseralias) {
+        this.receiverUseralias = receiverUseralias;
+    }
+
+    public String getTripId() {
+        return tripId;
+    }
+
+    public void setTripId(String tripId) {
+        this.tripId = tripId;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public Class getPO() {
+        return NoticePO.class;
+    }
+}

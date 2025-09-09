@@ -1,7 +1,7 @@
 package com.syduck.hitchcommons.helper;
 
 import com.syduck.hitchcommons.entity.SessionContext;
-import com.syduck.hitchcommons.tmeplate.SessionTemplate;
+import com.syduck.hitchcommons.template.SessionTemplate;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;

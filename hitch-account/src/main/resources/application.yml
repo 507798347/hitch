@@ -1,0 +1,19 @@
+spring:
+  data:
+   redis:
+    host: 192.168.230.128
+    port: 6379
+    timeout: 1000
+    password: Aa123456
+    jedis: # redis连接池
+      pool:
+        max-active: 8
+        max-wait: 1000
+        max-idle: 500
+        min-idle: 0
+  application:
+    name: hitch-account-server
+
+baidu:
+  apikey: JE2QyLQbHkGqSwnVTGr9ffpI
+  secretkey: yqQvmHdATb9t4rJMzOFXpDREf2rwCpMN

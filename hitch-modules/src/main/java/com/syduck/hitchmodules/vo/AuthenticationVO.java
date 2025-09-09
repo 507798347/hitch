@@ -1,0 +1,87 @@
+package com.syduck.hitchmodules.vo;
+
+import com.syduck.hitchcommons.domain.vo.VO;
+import com.syduck.hitchcommons.enums.InitialResolverType;
+import com.syduck.hitchcommons.groups.Group;
+import com.syduck.hitchcommons.initial.annotation.InitialResolver;
+import com.syduck.hitchmodules.po.AuthenticationPO;
+import jakarta.validation.constraints.NotEmpty;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+public class AuthenticationVO implements VO {
+
+    @InitialResolver(resolver = InitialResolverType.GEN_SNOWFLAKE_ID, groups = {Group.Create.class})
+    @NotEmpty(message = "ID不能为空", groups = {Group.Update.class})
+    private String id;
+    /**
+     * 用户姓名
+     */
+    private String useralias;
+    /**
+     * 手机号码
+     */
+    private String phone;
+
+    /**
+     * 年龄
+     */
+    private String birth;
+    /**
+     * 个人照片
+     */
+    private String personalPhoto;
+
+    /**
+     * 身份证号码
+     */
+    private String cardId;
+
+    /**
+     * 身份证正面照片
+     */
+    private String cardIdFrontPhoto;
+
+    /**
+     * 身份证背面照片
+     */
+    private String cardIdBackPhoto;
+
+    /**
+     * 认证状态 未认证：0认证成功：1认证失败：2
+     */
+    private String status;
+
+    /**
+     * 乐观锁
+     */
+    private Integer revision;
+    /**
+     * 创建人
+     */
+    @InitialResolver(resolver = InitialResolverType.CURRENTA_ACCOUNT, groups = {Group.Create.class})
+    private String createdBy;
+    /**
+     * 创建时间
+     */
+    @InitialResolver(resolver = InitialResolverType.CURRENT_DATE, groups = {Group.Create.class})
+    private Date createdTime;
+    /**
+     * 更新人
+     */
+    @InitialResolver(resolver = InitialResolverType.CURRENTA_ACCOUNT, groups = {Group.Update.class})
+    private String updatedBy;
+    /**
+     * 更新时间
+     */
+    @InitialResolver(resolver = InitialResolverType.CURRENT_DATE, groups = {Group.Update.class})
+    private Date updatedTime;
+
+
+    @Override
+    public Class getPO() {
+        return AuthenticationPO.class;
+    }
+}

@@ -41,4 +41,11 @@ public class LocalCollectionUtils {
         }
         return StringUtils.removeEnd(sb.toString(), ",");
     }
+
+    public static <T> T getOne(List<T> tList) {
+        if (null != tList && !tList.isEmpty()) {
+            return tList.stream().findFirst().get();
+        }
+        return null;
+    }
 }

@@ -1,6 +1,6 @@
 package com.syduck.hitchcommons.initial.annotation;
 
-import com.syduck.hitchcommons.aspect.RequestInitialAspect;
+import com.syduck.hitchcommons.initial.aspect.RequestInitialAspect;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;

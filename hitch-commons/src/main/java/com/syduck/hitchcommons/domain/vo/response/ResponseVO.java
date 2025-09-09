@@ -6,7 +6,6 @@ import com.syduck.hitchcommons.enums.ResponseState;
 import com.syduck.hitchcommons.exception.BusinessRuntimeException;
 import com.syduck.hitchcommons.utils.CommonsUtils;
 import com.syduck.hitchcommons.utils.LocalCollectionUtils;
-import com.syduck.hitchmodules.vo.AccountVO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -49,6 +48,13 @@ public class ResponseVO<T> implements Serializable {
 
     public static <T> ResponseVO<T> success(Object data){
         ResponseVO responseVO = build(ResponseState.SUCCESS);
+        responseVO.setData(LocalCollectionUtils.toList(transformVO(data)));
+        return responseVO;
+    }
+
+    public static <T> ResponseVO<T> success(Object data, String message) {
+        ResponseVO responseVO = build(ResponseState.SUCCESS);
+        responseVO.setMessage(message);
         responseVO.setData(LocalCollectionUtils.toList(transformVO(data)));
         return responseVO;
     }

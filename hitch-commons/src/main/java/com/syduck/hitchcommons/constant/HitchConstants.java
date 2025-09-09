@@ -34,5 +34,5 @@ public interface HitchConstants {
     String ACCOUNT_DEFAULT_AVATAR = "/web/img/default-header.jpg";
     String ACCOUNT_DEFAULT_PAYCODE = "/web/img/default-paycode.jpg";
     String BAIDU_AI_RESULT = "BAIDU_AI_RESULT";
-    String IMAGE_SERVER_ADDR = "http://portal-hongbaoyu-java.itheima.net";
+    String IMAGE_SERVER_ADDR = "http://portal-hongbaoyu-java.itsyduck.net";
 }

@@ -1,0 +1,18 @@
+package com.syduck.hitchnotice.service;
+
+import com.syduck.hitchmodules.po.StrokePO;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name = "hitch-storage-server", path = "/storage/stroke", contextId = "stroke")
+public interface StrokeAPIService {
+
+
+    /**
+     * 根据ID查看行程细节
+     */
+    @RequestMapping("/selectByID/{id}")
+    StrokePO selectByID(@PathVariable("id") String id);
+
+}
